@@ -8,7 +8,8 @@ class Question extends Model
 {
     use VotableTrait;
 
-    protected $appends = ['created_date'];
+    // Append the data(accessors like [getStatusAttribute, isFavorited] ) which i want to display on vue
+    protected $appends = ['created_date', 'is_favorited', 'favorites_count'];
 
     protected $fillable = ['title', 'body'];
 

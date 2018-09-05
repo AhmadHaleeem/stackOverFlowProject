@@ -5,7 +5,7 @@
     <span class="favourite-count">{{ $model->favorites_count }}</span>
 </a>
 
-<form id="favorite-{{ $name }}-{{ $model->id }}" action="/{{ $firstURISegment }}/{{ $model->id }}/favorites" method="post" style="display: none">
+<form id="favorite-{{ $name }}-{{ $model->id }}" action="/questions/{{ $model->id }}/favorites" method="post" style="display: none">
     @csrf
     @if ($model->is_favorited)
         @method('DELETE')
